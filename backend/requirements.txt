@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+langchain
+langgraph
+langchain-community
+beautifulsoup4
+pydantic
+pydantic-settings
+langchain-ollama
+langchain-google-genai
+langchain-openai
+lxml
+python-dotenv
