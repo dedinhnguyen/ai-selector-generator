@@ -26,6 +26,20 @@ def get_llm(temperature=0.1, use_json_format=True):
             base_url=settings.DEEPSEEK_BASE_URL,
             temperature=temperature
         )
+    elif provider == "groq":
+        return ChatOpenAI(
+            model=settings.GROQ_MODEL,
+            api_key=settings.GROQ_API_KEY,
+            base_url=settings.GROQ_BASE_URL,
+            temperature=temperature
+        )
+    elif provider == "grok":
+        return ChatOpenAI(
+            model=settings.GROK_MODEL,
+            api_key=settings.GROK_API_KEY,
+            base_url=settings.GROK_BASE_URL,
+            temperature=temperature
+        )
     else: # Default to Ollama
         return ChatOllama(
             model=settings.LLM_MODEL, 
